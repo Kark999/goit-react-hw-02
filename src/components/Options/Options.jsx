@@ -4,21 +4,21 @@ const Options = ({ updateFeedback }) => {
   return (
     <div className={css.optionsContainer}>
       <button
-        onClick={() => updateFeedback('Good')}
+        onClick={() => updateFeedback('good')}
         className={css.optionsBTN}
         type="button"
       >
         Good
       </button>
       <button
-        onClick={() => updateFeedback('Neutral')}
+        onClick={() => updateFeedback('neutral')}
         className={css.optionsBTN}
         type="button"
       >
         Neutral
       </button>
       <button
-        onClick={() => updateFeedback('Bad')}
+        onClick={() => updateFeedback('bad')}
         className={css.optionsBTN}
         type="button"
       >

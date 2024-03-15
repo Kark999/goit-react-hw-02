@@ -1,12 +1,11 @@
 import css from './Feedback.module.css';
-// import App from "../../App";
 
-const Feedback = () => {
+const Feedback = ({ feedback }) => {
   return (
     <ul className={css.feedbackList}>
-      <li className={css.feedbackListItem}>Good: 0</li>
-      <li className={css.feedbackListItem}>Neutral: 0</li>
-      <li className={css.feedbackListItem}>Bad: 0</li>
+      <li className={css.feedbackListItem}>Good: {feedback.good}</li>
+      <li className={css.feedbackListItem}>Neutral: {feedback.neutral}</li>
+      <li className={css.feedbackListItem}>Bad: {feedback.bad}</li>
     </ul>
   );
 };
