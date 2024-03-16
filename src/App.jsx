@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Description from './components/Description/Description';
 import Options from './components/Options/Options';
 import Feedback from './components/Feedback/Feedback';
+import Notification from './components/Notification/Notification';
 import './App.css';
 
 const setupFeedback = {
@@ -17,11 +18,14 @@ function App() {
     setFeedback({ ...feedback, [feedbackType]: feedback[feedbackType] + 1 });
   };
 
+  const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+
   return (
     <div>
       <Description />
       <Options updateFeedback={updateFeedback} />
-      <Feedback feedback={feedback} />
+      <Notification />
+      <Feedback feedback={feedback} total={totalFeedback} />
     </div>
   );
 }

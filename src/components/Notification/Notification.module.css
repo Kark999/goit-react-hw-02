@@ -1,0 +1,12 @@
+.notificationContainer {
+  display: flex;
+  justify-content: flex-start;
+  /* margin-bottom: 24px; */
+}
+
+.notificationText {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04;
+}
